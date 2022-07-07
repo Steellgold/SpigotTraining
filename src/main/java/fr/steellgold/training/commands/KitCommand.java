@@ -42,6 +42,7 @@ public class KitCommand implements CommandExecutor {
             }
 
             // TODO: Cancel click/move items
+            // TODO: Format prices (10000 pts -> 10,000 pts)
 
             player.openInventory(inventory);
         }
