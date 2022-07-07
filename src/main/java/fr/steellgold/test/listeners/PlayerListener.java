@@ -30,7 +30,7 @@ public class PlayerListener implements Listener {
         if (Objects.equals(item, new ItemStack(Material.COMPASS))) {
             Inventory inventory = server.createInventory(null, 9, "Menu");
             for (int i = 0; i < 9 * 3; i++) {
-                inventory.setItem(i, new ItemStack(Material.GLASS_PANE));
+                inventory.setItem(i, new ItemStack(Material.BLACK_STAINED_GLASS_PANE));
             }
 
             player.openInventory(inventory);
