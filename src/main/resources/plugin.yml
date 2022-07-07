@@ -5,3 +5,7 @@ author: Steellgold
 main: fr.steellgold.training.Main
 api-version: 1.13
 
+commands:
+  kits:
+    description: Choose a kit
+    usage: /kits
