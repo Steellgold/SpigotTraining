@@ -13,7 +13,6 @@ public class PlayerListener implements Listener {
         event.setJoinMessage("");
 
         Player player = event.getPlayer();
-
         player.sendMessage(Main.PREFIX + "Welcome in the server §n" + player.getName() + " §e§r!");
     }
 }

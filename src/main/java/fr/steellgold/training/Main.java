@@ -14,8 +14,6 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         this.saveDefaultConfig();
 
-        System.out.println(this.getConfig().get("kits"));
-
         this.getServer().getPluginManager().registerEvents(new PlayerListener(), this);
         this.getCommand("kits").setExecutor(new KitCommand());
     }
