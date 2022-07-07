@@ -6,15 +6,25 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
 
+    private static Main instance;
+
+    public Main() {
+        instance = this;
+    }
+
     public static String PREFIX = "§e§l(!) §r§e";
     public static String PREFIX_INFO = "§3§l(!) §r§3";
     public static String PREFIX_ERROR = "§c§l(!) §r§c";
 
     @Override
     public void onEnable() {
-        this.saveDefaultConfig();
+        this.saveResource("config.yml",true);
 
         this.getServer().getPluginManager().registerEvents(new PlayerListener(), this);
         this.getCommand("kits").setExecutor(new KitCommand());
+    }
+
+    public static Main getInstance() {
+        return instance;
     }
 }

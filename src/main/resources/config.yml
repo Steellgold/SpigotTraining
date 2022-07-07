@@ -1,2 +1,29 @@
 kits:
-  message: hey
+  1:
+    name: "Villager"
+    item: "RED_BED"
+    price: 0
+  2:
+    name: "Bourgeois"
+    item: "IRON_INGOT"
+    price: 10000
+  3:
+    name: "Greedy"
+    item: "CAKE"
+    price: 20000
+  4:
+    name: "Builder"
+    item: "BRICK"
+    price: 30000
+  5:
+    name: "Artist"
+    item: "BLUE_DYE"
+    price: 40000
+  6:
+    name: "Knight"
+    item: "IRON_SWORD"
+    price: 50000
+  7:
+    name: "Defender"
+    item: "SHIELD"
+    price: 100000
