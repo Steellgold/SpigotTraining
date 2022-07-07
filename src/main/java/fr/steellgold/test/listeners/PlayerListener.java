@@ -7,6 +7,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.Objects;
@@ -27,7 +28,12 @@ public class PlayerListener implements Listener {
         ItemStack item = event.getItem();
 
         if (Objects.equals(item, new ItemStack(Material.COMPASS))) {
-            ui =
+            Inventory inventory = server.createInventory(null, 9, "Menu");
+            for (int i = 0; i < 9 * 3; i++) {
+                inventory.setItem(i, new ItemStack(Material.GLASS_PANE));
+            }
+
+            player.openInventory(inventory);
         }
     }
 }
