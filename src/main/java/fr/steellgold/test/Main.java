@@ -7,8 +7,6 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getLogger().info("Hello World!");
-
         this.getServer().getPluginManager().registerEvents(new PlayerListener(), this);
     }
 
