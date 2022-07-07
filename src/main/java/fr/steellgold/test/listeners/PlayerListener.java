@@ -3,12 +3,15 @@ package fr.steellgold.test.listeners;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Server;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
@@ -43,7 +46,7 @@ public class PlayerListener implements Listener {
             }
 
             // 0-9
-            inventory.setItem(4, setCustomName(new ItemStack(Material.PLAYER_HEAD),ChatColor.RESET + player.getName()));
+            inventory.setItem(4, setCustomName(new ItemStack(Material.PLAYER_HEAD), ChatColor.RESET + player.getName()));
 
             // 10-18
             inventory.setItem(11, new ItemStack(Material.BEDROCK));
