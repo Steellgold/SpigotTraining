@@ -1,8 +1,12 @@
 package fr.steellgold.training;
 
 import fr.steellgold.training.commands.KitCommand;
-import fr.steellgold.training.listeners.PlayerListener;
+import fr.steellgold.training.listeners.KitListeners;
+import fr.steellgold.training.listeners.PlayerListeners;
+import fr.steellgold.training.tasks.MessageInfoTask;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.Objects;
 
 public class Main extends JavaPlugin {
 
@@ -18,10 +22,12 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        this.saveResource("config.yml",true);
+        this.saveResource("kits.yml",true);
 
-        this.getServer().getPluginManager().registerEvents(new PlayerListener(), this);
-        this.getCommand("kits").setExecutor(new KitCommand());
+        this.getServer().getPluginManager().registerEvents(new PlayerListeners(), this);
+        this.getServer().getPluginManager().registerEvents(new KitListeners(), this);
+        this.getServer().getScheduler().scheduleSyncRepeatingTask(this, new MessageInfoTask(), 0, 90L);
+        Objects.requireNonNull(this.getCommand("kits")).setExecutor(new KitCommand());
     }
 
     public static Main getInstance() {
