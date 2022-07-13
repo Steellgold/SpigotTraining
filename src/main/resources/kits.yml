@@ -1,3 +1,5 @@
+armor_apply: true
+
 kits:
   1:
     name: "Villager"
