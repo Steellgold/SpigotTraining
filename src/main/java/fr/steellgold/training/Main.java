@@ -1,5 +1,6 @@
 package fr.steellgold.training;
 
+import fr.steellgold.training.commands.IslandCommand;
 import fr.steellgold.training.commands.KitCommand;
 import fr.steellgold.training.listeners.KitListeners;
 import fr.steellgold.training.listeners.PlayerListeners;
@@ -28,6 +29,7 @@ public class Main extends JavaPlugin {
         this.getServer().getPluginManager().registerEvents(new KitListeners(), this);
         this.getServer().getScheduler().scheduleSyncRepeatingTask(this, new MessageInfoTask(), 0, 90L);
         Objects.requireNonNull(this.getCommand("kits")).setExecutor(new KitCommand());
+        Objects.requireNonNull(this.getCommand("island")).setExecutor(new IslandCommand());
     }
 
     public static Main getInstance() {

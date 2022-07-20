@@ -9,3 +9,6 @@ commands:
   kits:
     description: Choose a kit
     usage: /kits
+  island:
+    description: Choose a island
+    usage: /island
